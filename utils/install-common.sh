@@ -11,7 +11,7 @@ install_apisix_dependencies_deb() {
 }
 
 install_apisix_dependencies_rpm() {
-    cat /etc/yum.repos.d/CentOS-Base.repo
+    sudo mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
     install_dependencies_rpm
     install_openresty_rpm
     install_luarocks
