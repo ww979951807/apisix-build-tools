@@ -2,7 +2,10 @@
 set -euo pipefail
 set -x
 
-if [ "${IMAGE_BASE}" == "ubuntu" ]
+if [ "${IMAGE_BASE}" == "centos" ]
+then
+    dist="el${IMAGE_TAG}"
+elif [ "${IMAGE_BASE}" == "ubuntu" ]
 then
     dist="${IMAGE_BASE}${IMAGE_TAG}"
 elif [ "${IMAGE_BASE}" == "debian" ]
