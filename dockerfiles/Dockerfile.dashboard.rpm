@@ -5,6 +5,7 @@ FROM ${IMAGE_BASE}:${IMAGE_TAG}
 
 COPY ./utils/install-common.sh /install-common.sh
 COPY ./utils/determine-dist.sh /determine-dist.sh
+COPY ./CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo
 
 # install dependencies
 RUN /install-common.sh install_dashboard_dependencies_rpm
